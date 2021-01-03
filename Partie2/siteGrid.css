@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+    background-color: #AED581;
+}
+
+body{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
+	grid-gap: 10px;
+}
+
+.header {
+    grid-row: 1;
+    grid-column: 1/-1;
+    color: white;
+    width:100%;
+    text-align:center;
+    width: 900px;
+    height:200px; 
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    z-index:1;
+}
+#background {
+    position: absolute;
+    z-index:0;
+    background-image: url("image/saumon.jpg");
+    background-size: 900px 200px;
+    background-repeat: no-repeat;
+    width: 900px;
+    height:300px; 
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+
+
+}
+
+}
+.menu {
+    grid-row: 2;
+    grid-column: 1/-1;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #28d0d0;
+    display: block ;
+    color: white;
+    text-decoration: none;
+}
+    
+.menu li a:hover {
+    background-color: #F23000;
+}
+
+.menu li a.active {
+    background-color: #0D6889;
+}
+
+.contenu {
+    grid-row: 3;
+    grid-column: 1/-1;
+    background-image: url("image/vraiment_bon.jpg");
+    background-repeat: no-repeat;
+}
+
+.aside {
+    grid-row: 4;
+    grid-column: 1/-1;
+    background-color: #28d0d0;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+.footer {
+    grid-row: 5;
+    grid-column: 1/-1;
+    background-color: #003466;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* Pour petits écrans / tablettes */
+    body{
+        grid-template-rows: 2fr 2fr 2fr 1fr;
+    }
+    .menu {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .contenu {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .aside {
+        grid-row: 3;
+        grid-column: 1/-1;
+    }
+    .footer {
+        grid-row: 4;
+        grid-column: 1/-1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Autres écrans d'une largeur minimum de 768px */
+    body{
+        grid-template-rows: 2fr 6fr 1fr;
+    }
+    
+    .menu {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .contenu {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .aside {
+        grid-row: 2;
+        grid-column: 3;
+    }
+    .footer {
+        grid-row: 3;
+        grid-column: 1/-1;
+    }
+}
